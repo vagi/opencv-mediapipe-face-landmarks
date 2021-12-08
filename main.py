@@ -5,7 +5,7 @@ import mediapipe as mp
 
 
 print(cv2.__version__)
-
+# Camera resolution
 width = 1280
 height = 720
 
@@ -18,7 +18,9 @@ cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
 my_face_mesh = mp.solutions.face_mesh.FaceMesh(3, 1)
 mp_draw = mp.solutions.drawing_utils
 
+# Set thickness of lines and color in circle forms, contours
 draw_spec_circle = mp_draw.DrawingSpec(thickness=1, circle_radius=0, color=(0, 255, 0))
+# Set thickness and color of points
 draw_spec_line = mp_draw.DrawingSpec(thickness=1, circle_radius=0, color=(0, 0, 255))
 
 font = cv2.FONT_HERSHEY_SIMPLEX
