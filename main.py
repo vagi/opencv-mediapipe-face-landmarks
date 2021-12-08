@@ -1,3 +1,5 @@
+# Finding face landmarks from streaming video in real-time using OpenCV, Mediapipe
+
 import cv2
 import mediapipe as mp
 
@@ -16,8 +18,8 @@ cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
 my_face_mesh = mp.solutions.face_mesh.FaceMesh(3, 1)
 mp_draw = mp.solutions.drawing_utils
 
-draw_spec_circle = mp_draw.DrawingSpec(thickness=2, circle_radius=2, color=(255, 0, 0))
-draw_spec_line = mp_draw.DrawingSpec(thickness=1, circle_radius=1, color=(0, 0, 255))
+draw_spec_circle = mp_draw.DrawingSpec(thickness=1, circle_radius=0, color=(0, 255, 0))
+draw_spec_line = mp_draw.DrawingSpec(thickness=1, circle_radius=0, color=(0, 0, 255))
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 font_size = 0.5
